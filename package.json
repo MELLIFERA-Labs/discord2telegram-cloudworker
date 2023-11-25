@@ -1,13 +1,22 @@
 {
   "name": "discord2telegram",
   "version": "0.0.0",
-  "private": true,
+  "description": "Cloudworker bot that forwards messages from Discord channel to Telegram channel",
+  "type": "module",
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "start": "wrangler dev",
+    "build": "node ./build.js"
   },
   "devDependencies": {
+    "vitest": "^0.34.6",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@grammyjs/auto-retry": "^1.1.1",
+    "discord-api-types": "^0.37.65",
+    "grammy": "^1.19.2",
+    "markdown-it": "^13.0.2"
   }
 }
