@@ -1,8 +1,8 @@
 # discord2telegram-cloudworker
 
-> Cloudworker(Cloudflare) bot that forwards messages from Discord channel to Telegram channel
+> Cloudworker(Cloudflare) bot that forwards messages from the Discord channel to the Telegram channel
 
-## Run localy
+## Run locally
 1. Install node_modules
 ```bash
 npm i
@@ -19,7 +19,7 @@ TELEGRAM_CHAT_ID = ''
 ```bash
 npx wrangler dev --test-scheduled
 ```
-4. To execute worker call this command in another terminal
+4. To execute the worker call this command in new terminal winodow
 ```bash
 curl "http://localhost:8787/__scheduled?cron=0+*+*+*+*"
 ```
