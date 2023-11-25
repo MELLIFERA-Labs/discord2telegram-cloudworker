@@ -129,7 +129,7 @@ export default async function main(CACHE, env) {
 				})
 				parsedMsg += `\n\nAuthor: ${message.author.global_name}`
 				parsedMsg += `\nDate: ${formatedData} `
-				parsedMsg += `\n[Original discord message](https://discord.com/${env.GUILD_ID}/${env.CHAT_ID}/${message.id})`
+				parsedMsg += `\n[Original discord message](https://discord.com/${env.DISCORD_GUILD_ID}/${env.DISCORD_CHAT_ID}/${message.id})`
 
 				parsedMsg = parsedMsg.replace(/@(\w+)/g, '`@$1`');
 
