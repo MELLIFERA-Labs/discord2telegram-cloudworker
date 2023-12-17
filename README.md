@@ -14,6 +14,7 @@ DISCORD_CHAT_ID = ''
 DISCORD_GUILD_ID = ''
 TELEGRAM_TOKEN = ''
 TELEGRAM_CHAT_ID = ''
+KV_NAME = ''
 ```
 3. Run worker
 ```bash
@@ -26,7 +27,7 @@ curl "http://localhost:8787/__scheduled?cron=0+*+*+*+*"
 
 ## Deploy to cloud flare
 1. You have to set all secrets see `.dev.vars.example`
-2. Set KV store and called it `CACHE`
+2. Create KV store and called it as `KV_NAME` value in `env`
 3. Edit `wrangler.toml` with KV id
 4. Deploy by command
 ```bash
