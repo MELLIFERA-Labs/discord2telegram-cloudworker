@@ -100,7 +100,6 @@ export default async function main(CACHE, env) {
 	const bot = new Bot(env.TELEGRAM_TOKEN);
 	bot.api.config.use(autoRetry());
 	const messages = await discordApi(Routes.channelMessages(env.DISCORD_CHAT_ID))
-
 	for (const message of messages.reverse()) {
 		try {
 			if (await CACHE.get(`message:${message.id}`)) {
@@ -129,7 +128,7 @@ export default async function main(CACHE, env) {
 				})
 				parsedMsg += `\n\nAuthor: ${message.author.global_name}`
 				parsedMsg += `\nDate: ${formatedData} `
-				parsedMsg += `\n[Original discord message](https://discord.com/${env.DISCORD_GUILD_ID}/${env.DISCORD_CHAT_ID}/${message.id})`
+				parsedMsg += `\n[Original discord message](https://discord.com/channels/${env.DISCORD_GUILD_ID}/${env.DISCORD_CHAT_ID}/${message.id})`
 
 				parsedMsg = parsedMsg.replace(/@(\w+)/g, '`@$1`');
 

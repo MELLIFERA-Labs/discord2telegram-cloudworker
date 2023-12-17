@@ -1,9 +1,8 @@
-name = "namada_discord2telegram"
+name = "<YOUR_APPNAME>_discord2telegram"
 main = "./dist/index.js"
 compatibility_date = "2023-11-21"
 
 kv_namespaces = [
-   { binding = "CACHE", id = "e3b344f468b04f2ca6165d43fdd0a16c", preview_id = "7ad187792cd64cd7adc69ba82677e192" }
 ]
 
 workers_dev = false
